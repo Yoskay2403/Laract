@@ -32,6 +32,27 @@ Route::resource('pengajar', PengajarController::class);
 Route::resource('peserta', PesertaController::class);
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
+
+// Route::middleware(['auth', 'verified'])->group(function () {
+// Route::get('/dashboard', [ProgramController::class, 'index'])->name('dashboard');
+// Route::get('/program', [ProgramController::class, 'index']);
+// Route::post('/programs', [ProgramController::class, 'store']);
+// Route::put('/programs/{id}', [ProgramController::class, 'update']);
+// Route::delete('/programs/{id}', [ProgramController::class, 'destroy']);
+// Route::resource('berita', BeritaController::class);
+// Route::resource('testimoni', TestimoniController::class);
+// Route::resource('galery', GaleryController::class);
+// Route::resource('program', ProgramController::class);
+// Route::resource('pengajar', PengajarController::class);
+// Route::resource('peserta', PesertaController::class);
+// });
+
+
+// Route::middleware(['auth', 'verified'])->group(function () {
+//     Route::get('/dashboard/program', [DashboardController::class, 'index'])->name('dashboard');
+// });
+// Route::resource('program', ProgramController::class);
+
 // // Rute untuk dashboard admin
 // Route::middleware(['auth', 'admin'])->group(function () {
 //     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
